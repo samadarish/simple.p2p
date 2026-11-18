@@ -1,0 +1,5 @@
+# Codex logs from failed image runs
+design/images/new/log-*.txt
+node_modules/
+.DS_Store
+Thumbs.db

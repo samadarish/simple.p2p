@@ -1,0 +1,34 @@
+/* simple.p2p design tokens: the colours, fonts and shapes every screen uses.
+   Source of truth: demo/src/p1-head.html (:root). Keep this file in sync with it.
+   Style: the ServiceNow Horizon / Next Experience workspace look. Style only, never their name or logo.
+   Fonts (Google Fonts):
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cabin:wght@500;600;700&family=IBM+Plex+Mono:wght@500&family=Lato:wght@400;700&display=swap">
+*/
+:root{
+  --hdr:#032B3A;--hdr-2:#0C3F51;--hdr-field:#163F4F;--hdr-line:#2A5868;--on-hdr:#FFFFFF;--hdr-muted:#9DBDC8;--hdr-text:#E3EEF2;
+  --pri:#0081A2;--pri-d:#00566E;--pri-dd:#002C38;--pri-l:#BCDFE7;--pri-ll:#E8F4F7;
+  --strip:#C5E0E8;--strip-h:#D8EBF0;
+  --bg:#F1F3F4;--card:#FFFFFF;--soft:#F6F8F9;--line:#D9DFE2;--line-2:#BCC4C9;
+  --text:#1D262A;--text-2:#3D4A50;--muted:#65727A;--link:#00739A;
+  --panel:#E2EDF1;--panel-line:#CBDDE4;--iconbar:#C2DCE4;
+  --pos:#2F6301;--pos-bg:#E0EFD3;--pos-dot:#3F8500;--pos-line:#9CC77E;
+  --info:#005D9A;--info-bg:#DDECF9;--info-dot:#0079CC;--info-line:#8CBDE6;
+  --mod:#4F3BA6;--mod-bg:#EBE6FD;--mod-dot:#7A5DF0;--mod-line:#B3A3F6;
+  --warn:#5E5007;--warn-bg:#FFF6C4;--warn-dot:#C9AC10;--warn-line:#E8D466;
+  --high:#7A4700;--high-bg:#FFE7C4;--high-dot:#FD9601;--high-line:#F5B860;
+  --crit:#A81A29;--crit-bg:#FCDDE0;--crit-dot:#E52238;--crit-line:#EE8A94;
+  --low:#4A5053;--low-bg:#E6E8E9;--low-dot:#6D7376;--low-line:#B4B8BA;
+  --note:#FFF8DC;--note-line:#EDDC98;--sum-line:#71BC8F;--sum-bg:#F4FAF6;
+  --f-h:"Cabin","Lato",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  --f-b:"Lato",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  --r-s:2px;--r-m:6px;--r-l:8px;--top:calc(48px + env(safe-area-inset-top,0px));
+  color-scheme:light;
+}
+
+/* Header art (page hero). Full rules: design/image-style-guide.md */
+.hero{position:relative;display:flex;align-items:center;min-height:270px;padding:30px 36px;border-radius:12px;background:#FBF7EC;overflow:hidden;isolation:isolate}
+.hero.sm{min-height:190px;padding:24px 30px}
+.hero-art{position:absolute;inset:0;z-index:-2;background-position:right center;background-size:cover;background-repeat:no-repeat}
+.hero::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(251,247,236,.95) 0%,rgba(250,247,238,.8) 30%,rgba(245,247,240,0) 56%)}
+.eyebrow{font:500 12.5px/1.2 "IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;letter-spacing:.09em;text-transform:uppercase;color:var(--text-2)}
+.hero h1{font:700 38px/1.06 var(--f-h);letter-spacing:-.025em;color:#161E22;text-wrap:balance}
